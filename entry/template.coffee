@@ -9,14 +9,14 @@ Page = React.createFactory require '../app/page'
 
 {html, head, title, body, meta, script, link, div, a, span} = stir
 
-repo = 'http://github.com/jianliaoim/coffee-webpack-starter'
+repo = 'http://github.com/jianliaoim/react-jianliao-app-banner'
 
 module.exports = (data) ->
 
   stir.render stir.doctype(),
     html null,
       head null,
-        title null, "Coffee Webpack Starter"
+        title null, "Jianliao App Banner"
         meta charset: 'utf-8'
         meta name: 'viewport', content: 'initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'
         link rel: 'icon', href: 'http://tp4.sinaimg.cn/5592259015/180/5725970590/1'

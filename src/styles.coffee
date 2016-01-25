@@ -1,13 +1,12 @@
 
 hsl = require 'hsl'
-vendor = require 'react-vendor-prefix'
 
 if typeof window is 'undefined'
   logo = ''
 else
   logo = require './talk-128.png'
 
-exports.box = vendor.prefixOne
+exports.box =
   width: '100%'
   height: '80px'
   padding: '10px 10px'

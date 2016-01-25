@@ -21,7 +21,7 @@ gulp.task 'rsync', (cb) ->
     src: ['build/*']
     recursive: true
     args: ['--verbose']
-    dest: 'talk-ui:/teambition/server/talk-ui/coffee-webpack-starter'
+    dest: 'talk-ui:/teambition/server/talk-ui/react-jianliao-app-banner'
     deleteAll: true
   , (error, stdout, stderr, cmd) ->
     if error?
