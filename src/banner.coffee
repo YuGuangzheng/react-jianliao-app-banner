@@ -1,6 +1,9 @@
 
 React = require 'react'
 
+if typeof window isnt 'undefined'
+  isMobile = require 'ismobilejs'
+
 styles = require './styles'
 
 {a, div, span, img, noscript} = React.DOM
@@ -17,7 +20,8 @@ module.exports = React.createClass
     @setState isHidden: true
 
   render: ->
-    if @state.isHidden
+    isAndroid = if isMobile? then isMobile.android.device else false
+    if @state.isHidden or (not isAndroid)
       noscript()
     else
       div style: styles.box,
