@@ -13,15 +13,22 @@ apkAddress = 'https://dn-talk.oss.aliyuncs.com/downloads/talk-teambition-release
 module.exports = React.createClass
   displayName: 'jianliao-app-banner'
 
+  propTypes:
+    isDisabled: React.PropTypes.bool
+
+  getDefaultProps: ->
+    isDisabled: false
+
   getInitialState: ->
     isHidden: false
 
   onHide: ->
     @setState isHidden: true
+    localStorage.setItem 'disabled-jianliao-app-banner', 'disabled'
 
   render: ->
     isAndroid = if isMobile? then isMobile.android.device else false
-    if @state.isHidden or (not isAndroid)
+    if @props.isDisabled or @state.isHidden or (not isAndroid)
       noscript()
     else
       div style: styles.box,

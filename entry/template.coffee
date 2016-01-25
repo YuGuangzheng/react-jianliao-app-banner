@@ -2,6 +2,7 @@
 stir = require 'stir-template'
 React = require 'react'
 config = require 'config'
+ReactDOM = require 'react-dom/server'
 
 assetLinks = require '../packing/asset-links'
 
@@ -32,4 +33,4 @@ module.exports = (data) ->
             a href: repo, repo
             span null, '.'
         div class: 'demo',
-          React.renderToString Page()
+          ReactDOM.renderToString Page()

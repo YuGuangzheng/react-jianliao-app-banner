@@ -4,7 +4,7 @@ hsl = require 'hsl'
 if typeof window is 'undefined'
   logo = ''
 else
-  logo = require './talk-128.png'
+  logo = require '../images/talk-128.png'
 
 exports.box =
   width: '100%'
