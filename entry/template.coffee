@@ -9,6 +9,8 @@ Page = React.createFactory require '../app/page'
 
 {html, head, title, body, meta, script, link, div, a, span} = stir
 
+repo = 'http://github.com/jianliaoim/coffee-webpack-starter'
+
 module.exports = (data) ->
 
   stir.render stir.doctype(),
@@ -24,12 +26,10 @@ module.exports = (data) ->
         script src: assetLinks.main, defer: true
       body null,
         div class: 'intro',
-          div class: 'title', "This is a demo of Webpack usage."
-          div class: 'line', "Open Console to see how it loads."
+          div class: 'title', "This is a demo of Jianliao Android banner."
           div null,
             span null, "Read more at "
-            a href: 'http://github.com/teambition/coffee-webpack-starter',
-              'github.com/teambition/coffee-webpack-starter'
+            a href: repo, repo
             span null, '.'
         div class: 'demo',
           React.renderToString Page()

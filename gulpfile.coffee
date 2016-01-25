@@ -11,7 +11,7 @@ gulp.task 'script', ->
   coffee = require('gulp-coffee')
   gulp
   .src 'src/*.coffee'
-  .pipe coffee()
+  .pipe coffee(bare: true)
   .pipe gulp.dest('lib/')
 
 gulp.task 'rsync', (cb) ->
@@ -55,7 +55,7 @@ gulp.task 'webpack-dev', (cb) ->
   compiler = webpack (webpackDev info)
   server = new WebpackDevServer compiler, webpackServer
 
-  server.listen config.webpackDevPort, 'localhost', (err) ->
+  server.listen config.webpackDevPort, '0.0.0.0', (err) ->
     if err?
       throw new gutil.PluginError("webpack-dev-server", err)
     gutil.log "[webpack-dev-server] is running..."

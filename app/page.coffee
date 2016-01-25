@@ -11,4 +11,3 @@ module.exports = React.createClass
   render: ->
     div className: 'app-page',
       Banner()
-      'Empty Page'

@@ -10,7 +10,7 @@ imageName = 'images/[name].[ext]'
 module.exports = (info) ->
   entry:
     vendor: [
-      "webpack-dev-server/client?http://localhost:#{config.webpackDevPort}"
+      "webpack-dev-server/client?http://#{config.host}:#{config.webpackDevPort}"
       'webpack/hot/dev-server'
       'react'
     ]
@@ -20,7 +20,7 @@ module.exports = (info) ->
   output:
     path: path.join info.__dirname, 'build'
     filename: '[name].js'
-    publicPath: "http://localhost:#{config.webpackDevPort}/"
+    publicPath: "http://#{config.host}:#{config.webpackDevPort}/"
   resolve: extensions: ['.js', '.coffee', '']
   module:
     loaders: [
