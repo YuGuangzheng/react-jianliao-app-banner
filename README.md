@@ -1,5 +1,5 @@
 
-CoffeeScript Webpack Starter
+Jianliao Android Banner
 ----
 
 > Simple banner to guide users to download Android app.
